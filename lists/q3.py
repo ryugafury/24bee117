@@ -1,14 +1,25 @@
-print("Pulkit mantri\n24BEE117")
-
-import random 
 list =[]
-def remove (l):
-    l =  [random.randrange(1,30) for _ in range (50) ]
-    f=[]
-    for i in l:
-        if i not in f:
-            f.append(i)
-    f.sort()
-
-    print(f"The list after removing all the reccuring elements is {f}")
-remove(list)
+def prime(l):
+    l=[]
+    n=int(input("Enter the range"))
+    c=0
+    d=0
+    e=0
+    for i in range(n):
+        l.append((int(input("Enter the elements of the list"))))
+        a=l[i]
+    for a in l:
+        for j in range (1,a+1):
+            if(a%j==0):
+                c+=1
+             
+        if(c==2):
+            d+=1
+        
+        else:
+           e+=1
+        
+    print(f"The number of prime numbers is {d}")
+    print(f"The number of co2mposite number is {e}")
+prime(list)
+            

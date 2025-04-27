@@ -1,14 +1,17 @@
-print("Pulkit mantri\n24BEE117")
+list=[]
+def num (l):
+    n = int(input("Enter the range"))
+    l= []
+    c=0
+    d=0
+    for i in range (n):
+        l.append(int(input("Enter the values of the list")))
+        if(l[i]%2==0):
+            c+=1
+        else:
+            d+=1
+    print(f"The number of odd numbers is {d}")
+    print(f"The number of even numbers is{c}")
 
-import random
-even=[random.randrange(2,100,2) for _ in range(4)]
+num(list)
 
-odd=[random.randrange(1,100,2) for _ in range (5)]
-print(f"The list of random odd numbers is : {odd}")
-print(f"The list of random even numbers is : {even} ")
-odd.pop(3)
-print(f"The list after removing the third element from odd list is : {odd}")
-odd[2] = even
-print(f"The odd list after adding the even list to it at the third position is : {odd}")
-flat =sorted( [*odd[:2],*even, *odd[3:]])
-print(f"The flattened list is : {flat}")
